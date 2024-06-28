@@ -10,8 +10,10 @@
 
     {% if user.is_authenticated %}
         <p>Hello, {{ user.first_name }} {{ user.last_name }}!</p>
+        <h2>Version {{ j }}</h2>
         <a href="{% url 'account_logout' %}">Logout</a>
     {% else %}
+        <h1>Version {{ j }}</h1>
         <a href="{% provider_login_url 'google' %}">Login with Google</a>
     {% endif %}
 </body>
